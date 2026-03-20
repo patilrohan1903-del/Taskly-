@@ -1,0 +1,9 @@
+<svg width="400" height="120" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(16, 16)">
+    <rect width="88" height="88" rx="24" fill="#5B52FA"/>
+    <path d="M26 48 L38 60 L62 30" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="62" cy="30" r="5" fill="#10B981"/>
+  </g>
+  <text x="120" y="82" font-family="'Inter', 'Poppins', sans-serif" font-size="64" font-weight="800" fill="#111827" letter-spacing="-3">Taskly</text>
+  <circle cx="310" cy="94" r="7" fill="#10B981"/>
+</svg>
