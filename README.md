@@ -1,44 +1,73 @@
-# Task Manager Full Stack Application
+<div align="center">
+  <img src="./frontend/public/taskly-icon.svg" width="120" alt="Taskly Logo" />
+  <h1>Taskly - Modern Task Manager</h1>
+  <p>A beautiful, minimalistic, and highly responsive Task Management application featuring an animated ambient background, real-time filtering, and a robust RESTful API.</p>
+</div>
 
-A premium, modern, and responsive full-stack task manager application built with Node.js, Express, React, Vite, and Tailwind CSS. The app features micro-animations using Framer Motion and scalable icons from Lucide React.
+---
 
-## Features
-- **Create Tasks**: Add new tasks instantly.
-- **View Tasks**: Beautifully animated list of tasks showing pending and completed states.
-- **Update Status**: One-click toggle between pending and completed.
-- **Delete Tasks**: Remove tasks no longer needed.
-- **Real-time UX**: Optimistic UI updates for a snappy, instantaneous feel.
+## 🚀 Key Features
 
-## Prerequisites
-- Node.js (v18+)
-- npm 
+- **Beautiful Ambient Background:** A custom glassmorphic UI with an animated, floating pastel mesh gradient.
+- **Smart Filtering & Search:** Instantly filter tasks by **Active** or **Completed** states, or search by title.
+- **Inline Editing:** Double-click any task text or simply hit the `edit` icon to rename your tasks seamlessly.
+- **Smooth Animations:** Powered by `framer-motion` for buttery smooth layout transitions, pop-ups, and hover tracking effects.
+- **Dynamic Task Interactions:** Active tasks instantly vanish from the "Active" view and slide into "Completed" exactly when checked!
+- **Zero-Friction State:** Highly persistent frontend caching mapping cleanly to a lightning-fast NodeJS backend.
 
-## Running the Application
+## 🛠️ Tech Stack
 
-### 1. Start the Backend API
+**Frontend:**
+- **React.js (Vite)**
+- **Tailwind CSS v3**
+- **Framer Motion** (Spring Animations)
+- **Lucide React** (Vector Icons)
+
+**Backend:**
+- **Node.js & Express.js**
+- **CORS** Enabled for cross-origin local requests
+- **UUID** for unique task identifier tracking
+
+## 💻 Getting Started (Local Development)
+
+To run **Taskly** locally, you will need to actively run both the Node.js backend server and the Vite frontend server.
+
+### 1. Start the Backend Server
+Initiate your terminal and run commands inside the `/backend` folder:
 ```bash
 cd backend
 npm install
 node server.js
 ```
-The backend server runs on `http://localhost:5000`.
+*The backend API will boot up securely on `http://localhost:5000`.*
 
-### 2. Start the Frontend App
-Open a new terminal window:
+### 2. Start the Frontend Server
+Open a **new** terminal window and run commands inside the `/frontend` folder:
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-The frontend application will be available at `http://localhost:5173`.
+*The React app will boot up on `http://localhost:5173`. Open this link in your latest browser!*
 
-## API Documentation (Endpoints)
-The backend provides a pure RESTful JSON API:
+## 🔌 API Endpoints Reference
 
-- `GET /tasks` - Retrieve a lists of all tasks.
-- `POST /tasks` - Create a new task.
-  - Body: `{ "title": "String", "description": "String (optional)" }`
-- `PUT /tasks/:id` - Update an existing task.
-  - Body: `{ "title": "String", "description": "String" }`
-- `PATCH /tasks/:id` - Toggle the status of a task between "pending" and "completed".
-- `DELETE /tasks/:id` - Delete a task by ID.
+The Express API follows standard REST architectural patterns returning JSON payloads.
+
+| Method   | Endpoint          | Description                                    |
+| :------- | :---------------- | :--------------------------------------------- |
+| `GET`    | `/tasks`          | Fetch the list of all tasks.                   |
+| `POST`   | `/tasks`          | Create a new task. (Body JSON: `{ title: string }`)  |
+| `PUT`    | `/tasks/:id`      | Update a task title based on UUID body.             |
+| `PATCH`  | `/tasks/:id`      | Toggle a task's status (Pending ↔ Completed). |
+| `DELETE` | `/tasks/:id`      | Delete a task completely from memory.          |
+
+## 🎨 Design & Branding
+Taskly ships with beautifully crafted, completely custom vector SVG branding internally structured for scaling.
+- Primary **Indigo**: `#4F46E5`
+- Success **Emerald**: `#10B981`
+- Warning **Amber**: `#F59E0B`
+- Typography **Inter**: `sans-serif, system-ui`
+
+---
+> **Designed and built with ❤️.** Focus strictly on your tasks without feeling overwhelmed by a cluttered UI.
