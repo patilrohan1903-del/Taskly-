@@ -26,6 +26,23 @@ html, body {
   flex-direction: column;
 }
 
+.animated-bg {
+  background-color: var(--bg);
+  background-image: 
+      radial-gradient(at 20% 20%, rgba(79, 70, 229, 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 10%, rgba(16, 185, 129, 0.2) 0px, transparent 50%),
+      radial-gradient(at 10% 80%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
+      radial-gradient(at 80% 80%, rgba(79, 70, 229, 0.2) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: floatBG 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatBG {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 /* Custom Webkit Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
